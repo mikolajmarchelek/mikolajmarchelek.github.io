@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mikolaj Marchelek</title>
+  <meta name="description" content="Mikolaj Marchelek: Computer Science student at Georgia Tech building AI systems, infrastructure and research.">
+  <meta name="theme-color" content="#08090a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#top">Mikolaj Marchelek</a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <span class="social">
+          <a href="https://github.com/mikolajmarchelek" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/mikolajmarchelek" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="resume-link" href="resume.pdf" download>Download resume</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <section class="hero">
+      <span class="badge">Georgia Tech · Computer Science · Class of 2028</span>
+      <h1>Mikolaj Marchelek</h1>
+      <p class="lead">Computer Science student at Georgia Tech with a FinTech minor. I work on LLM research, cloud infrastructure and low-latency systems.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">See my work</a>
+        <a class="btn" href="resume.pdf">Download resume</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <p class="label">About</p>
+      <h2>A little about me</h2>
+      <p class="body">I'm a Computer Science student at the Georgia Institute of Technology (3.91 GPA), concentrating in Intelligence and Systems &amp; Architecture, with a minor in FinTech. I'm from Warsaw, Poland, and speak Polish natively and English fluently.</p>
+      <p class="body">My work sits between machine learning research and production engineering: retrieval-augmented reasoning for LLMs, and matching engines measured in nanoseconds. I also like to shred in my Snowboard Competitive Team.</p>
+    </section>
+
+    <section id="experience" class="section">
+      <p class="label">Experience</p>
+      <h2>Where I've worked</h2>
+      <div class="timeline">
+        <article>
+          <div class="when">May 2026 – Present</div>
+          <div>
+            <h3>Algoverse Scholar</h3>
+            <p class="muted">Algoverse AI Research Program</p>
+            <ul>
+              <li>Built a retrieval-augmented reasoning pipeline for LLMs using FAISS/E5 retrieval and token-level <code>&lt;think&gt;</code> boundary control on DeepSeek-R1, evaluated on AIME 2025 and GSM-8K.</li>
+              <li>Engineered constrained decoding to override base-model solving bias, raising genuine hint yield from under 15% to 75% while diagnosing failure modes like prompt dilution and hallucination.</li>
+              <li>Designed ablations on retrieval basis and hint-injection strategy, running multi-GPU experiments on shared H100/A100 infrastructure with seeded, resumable pipelines.</li>
+              <li>Preparing a submission to an ARR main conference, October 2026.</li>
+            </ul>
+          </div>
+        </article>
+        <article>
+          <div class="when">Jun – Sep 2026</div>
+          <div>
+            <h3>AI Software Engineer Intern</h3>
+            <p class="muted">Mindbox Group · Warsaw, PL</p>
+            <ul>
+              <li>Architected an autonomous AI agent pipeline on Amazon EKS using n8n and Amazon Bedrock, automating Jira-to-PR code remediation with CloudWatch log analysis.</li>
+              <li>Provisioned EKS, IAM, ECR and VPC with Terraform, cutting cluster costs through node right-sizing and least-privilege IAM.</li>
+              <li>Built GitHub Actions CI/CD with Bedrock-powered PR review, enabling zero-touch deployment to production Kubernetes on every merge.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <p class="label">Projects &amp; research</p>
+      <h2>Selected work</h2>
+      <div class="projects">
+        <a class="project" href="https://github.com/mikolajmarchelek">
+          <figure class="shot"><img src="images/vip-real-estate.png" alt="Screenshot of the real estate intelligence app" loading="lazy" onerror="this.remove()"></figure>
+          <div class="info">
+            <h3>Real Estate AI Product Platform</h3>
+            <p class="meta">Undergraduate Product Engineer · VIP @ Georgia Tech · Sep 2026 – Present</p>
+            <p>Part of the AI-based Discovery and Innovation program. Designing the system architecture for a zone-aware real estate intelligence app, wrapping property and zoning ML models in a secure API with event-driven re-scoring and explainability.</p>
+            <span class="tags">ML APIs · System design · Explainability</span>
+          </div>
+        </a>
+        <a class="project" href="https://github.com/mikolajmarchelek">
+          <figure class="shot"><img src="images/order-book.png" alt="Screenshot of the limit order book UI" loading="lazy" onerror="this.remove()"></figure>
+          <div class="info">
+            <h3>Limit Order Book &amp; RL Agent</h3>
+            <p class="meta">Oct 2026</p>
+            <p>Price-time priority matching engine in Java at about 85 ns per add/cancel, profiled with JMH, with 61 tests under CI. An RL agent trains against it and runs 24/7 on a Raspberry Pi 5 as a systemd service on live crypto feeds.</p>
+            <span class="tags">Java · Python · JMH · Linux</span>
+          </div>
+        </a>
+        <a class="project" href="https://github.com/mikolajmarchelek">
+          <figure class="shot"><img src="images/healthcare-parser.png" alt="Screenshot of the healthcare charge parser" loading="lazy" onerror="this.remove()"></figure>
+          <div class="info">
+            <h3>RAG Healthcare Charge Parser</h3>
+            <p class="meta">Top 10 at Hacklytics @ GT · Feb 2026</p>
+            <p>Audits itemized medical bills with GPT, matches CPT codes against CMS pricing files across 255 insurance plans, and drafts dispute letters through a Streamlit chatbot.</p>
+            <span class="tags">Python · scikit-learn · Streamlit · RAG</span>
+          </div>
+        </a>
+        <a class="project" href="https://github.com/mikolajmarchelek">
+          <figure class="shot"><img src="images/diabetes-research.png" alt="Figure from the diabetes prediction paper" loading="lazy" onerror="this.remove()"></figure>
+          <div class="info">
+            <h3>Diabetes Prediction Research</h3>
+            <p class="meta">Independent research · May 2024</p>
+            <p>Research paper under a high school advisor comparing SVM and logistic regression for diabetes prediction, with preprocessing for multicollinearity and non-linearity.</p>
+            <span class="tags">Python · pandas · NumPy</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <p class="label">Skills</p>
+      <h2>Tools I work with</h2>
+      <dl class="skills">
+        <div><dt>Languages</dt><dd><ul class="chips"><li>Python</li><li>Java</li><li>SQL</li><li>C</li><li>C++</li><li>Assembly</li></ul></dd></div>
+        <div><dt>ML / AI</dt><dd><ul class="chips"><li>PyTorch</li><li>Hugging Face</li><li>FAISS</li><li>Amazon Bedrock</li><li>pandas</li><li>NumPy</li><li>scikit-learn</li></ul></dd></div>
+        <div><dt>Infrastructure</dt><dd><ul class="chips"><li>AWS (EKS, IAM, ECR, CloudWatch)</li><li>Kubernetes</li><li>Terraform</li><li>Docker</li><li>GitHub Actions</li><li>Git</li><li>Streamlit</li><li>n8n</li><li>JavaFX</li><li>JMH</li></ul></dd></div>
+        <div><dt>Languages spoken</dt><dd><ul class="chips"><li>Polish (native)</li><li>English (fluent)</li></ul></dd></div>
+      </dl>
+    </section>
+
+    <section id="contact" class="section">
+      <p class="label">Contact</p>
+      <h2>Get in touch</h2>
+      <p class="body">You can contact me at <a class="link" href="mailto:mikolaj.marchelek@gmail.com">mikolaj.marchelek@gmail.com</a>.</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:mikolaj.marchelek@gmail.com">Email me</a>
+        <a class="btn" href="https://github.com/mikolajmarchelek">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/mikolajmarchelek">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year">2026</span> Mikolaj Marchelek</div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
